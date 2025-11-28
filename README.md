@@ -24,8 +24,23 @@ This repository collects and organizes digital scores of Franz Schubert's compos
 
 ## Current Collection
 
+### Chamber & Piano (Metadata Available)
 - **D667** - Piano Quintet "Trout" (1819)
 - **D899** - Four Impromptus Op. 90 (1827)
+
+### Lieder - Complete Song Cycles ✓
+- **D795** - Die schöne Müllerin (20 songs, 1823)
+- **D911** - Winterreise (24 songs, 1827)
+- **D957** - Schwanengesang (14 songs, 1828)
+
+### Additional Lieder Collections
+- D877 - 4 Gesänge aus Wilhelm Meister (4 songs)
+- Op.96, Op.22, Op.52, Op.59, Op.60 collections
+- Various individual songs including **Erlkönig (D328)** and **Ave Maria (D839)**
+
+**Total: 96 machine-readable scores (94 lieder + 2 others)**
+
+See [DOWNLOADED_SCORES_SUMMARY.md](DOWNLOADED_SCORES_SUMMARY.md) for complete details.
 
 ## Quick Start
 

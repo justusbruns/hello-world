@@ -2,7 +2,8 @@
   "collection": "Franz Schubert Digital Scores",
   "description": "Machine-readable scores and metadata for the works of Franz Schubert (1797-1828)",
   "last_updated": "2025-11-28",
-  "total_works": 2,
+  "total_works": 12,
+  "total_scores": 96,
   "works": [
     {
       "work_id": "D667",
@@ -19,21 +20,103 @@
       "year": 1827,
       "metadata_file": "metadata/D899_impromptus.json",
       "score_files": ["scores/piano/D899_impromptus.musicxml"]
+    },
+    {
+      "work_id": "D795",
+      "title": "Die schöne Müllerin",
+      "category": "lieder",
+      "year": 1823,
+      "songs": 20,
+      "score_files": ["scores/musicxml/lieder/D795_*.mxl"],
+      "notes": "Complete song cycle - all 20 songs available"
+    },
+    {
+      "work_id": "D911",
+      "title": "Winterreise",
+      "category": "lieder",
+      "year": 1827,
+      "songs": 24,
+      "score_files": ["scores/musicxml/lieder/D911_*.mxl"],
+      "notes": "Complete song cycle - all 24 songs available"
+    },
+    {
+      "work_id": "D957",
+      "title": "Schwanengesang",
+      "category": "lieder",
+      "year": 1828,
+      "songs": 14,
+      "score_files": ["scores/musicxml/lieder/D957_*.mxl"],
+      "notes": "Complete posthumous collection - all 14 songs available"
+    },
+    {
+      "work_id": "D877",
+      "title": "4 Gesänge aus Wilhelm Meister",
+      "category": "lieder",
+      "year": 1826,
+      "songs": 4,
+      "score_files": ["scores/musicxml/lieder/D877_*.mxl"]
+    },
+    {
+      "work_id": "Op.96",
+      "title": "4 Lieder, Op.96",
+      "category": "lieder",
+      "songs": 4,
+      "score_files": ["scores/musicxml/lieder/Unknown_4_Lieder_Op96_*.mxl"]
+    },
+    {
+      "work_id": "Op.22",
+      "title": "Lieder Op.22",
+      "category": "lieder",
+      "songs": 2,
+      "score_files": ["scores/musicxml/lieder/Unknown_Op22_*.mxl"]
+    },
+    {
+      "work_id": "Op.52",
+      "title": "Lieder Op.52",
+      "category": "lieder",
+      "songs": 7,
+      "score_files": ["scores/musicxml/lieder/Unknown_Op52_*.mxl"]
+    },
+    {
+      "work_id": "Op.59",
+      "title": "Lieder Op.59",
+      "category": "lieder",
+      "songs": 4,
+      "score_files": ["scores/musicxml/lieder/Unknown_Op59_*.mxl"]
+    },
+    {
+      "work_id": "Op.60",
+      "title": "Lieder Op.60",
+      "category": "lieder",
+      "songs": 2,
+      "score_files": ["scores/musicxml/lieder/Unknown_Op60_*.mxl"]
+    },
+    {
+      "work_id": "Various",
+      "title": "Miscellaneous Lieder",
+      "category": "lieder",
+      "songs": 12,
+      "score_files": ["scores/musicxml/lieder/Unknown_*.mxl"]
     }
   ],
   "statistics": {
     "by_category": {
       "chamber": 1,
       "piano": 1,
-      "lieder": 0,
+      "lieder": 94,
       "symphony": 0,
       "sacred": 0,
       "stage_work": 0
     },
     "by_period": {
       "Early Period (1810-1817)": 0,
-      "Middle Period (1818-1823)": 1,
-      "Late Period (1824-1828)": 1
+      "Middle Period (1818-1823)": 21,
+      "Late Period (1824-1828)": 75
+    },
+    "major_song_cycles": {
+      "D795 - Die schöne Müllerin": "✓ Complete (20 songs)",
+      "D911 - Winterreise": "✓ Complete (24 songs)",
+      "D957 - Schwanengesang": "✓ Complete (14 songs)"
     }
   },
   "priority_works_to_add": [
@@ -42,9 +125,21 @@
     "D810 - String Quartet No. 14 'Death and the Maiden'",
     "D956 - String Quintet in C major",
     "D960 - Piano Sonata No. 21 in B-flat major",
-    "D911 - Winterreise (song cycle)",
-    "D795 - Die schöne Müllerin (song cycle)",
-    "D328 - Erlkönig",
-    "D839 - Ave Maria"
-  ]
+    "D935 - Four Impromptus Op. 142",
+    "D780 - Six Moments Musicaux",
+    "D850 - Piano Sonata No. 17 in D major"
+  ],
+  "completed_priorities": [
+    "✓ D911 - Winterreise (song cycle) - 24 songs",
+    "✓ D795 - Die schöne Müllerin (song cycle) - 20 songs",
+    "✓ D957 - Schwanengesang (collection) - 14 songs"
+  ],
+  "source_repositories": {
+    "OpenScore-Lieder": {
+      "cloned": true,
+      "location": "external/OpenScore-Lieder",
+      "schubert_works": 94,
+      "status": "✓ Downloaded and organized"
+    }
+  }
 }

@@ -1,3 +1,6 @@
+# External repositories (cloned separately)
+external/
+
 # Large score files (optional - remove if you want to track them)
 # Uncomment the following if score files are too large for git
 # *.musicxml
