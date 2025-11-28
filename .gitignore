@@ -1,0 +1,36 @@
+# Large score files (optional - remove if you want to track them)
+# Uncomment the following if score files are too large for git
+# *.musicxml
+# *.mscz
+# *.mei
+
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Python (if adding scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+ENV/
+
+# Node (if adding web interface)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Temporary files
+*.tmp
+*.bak
+*.log

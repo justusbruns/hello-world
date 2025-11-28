@@ -1,0 +1,76 @@
+{
+  "work_id": "D899",
+  "title": {
+    "original": "Vier Impromptus für Klavier",
+    "english": "Four Impromptus for Piano",
+    "alternative": ["Impromptus Op. 90"]
+  },
+  "category": "piano",
+  "composition_date": {
+    "year": 1827,
+    "circa": false
+  },
+  "key": "Various (C minor, E-flat major, G-flat major, A-flat major)",
+  "opus_number": "Op. 90",
+  "instrumentation": [
+    "piano solo"
+  ],
+  "duration_minutes": 28,
+  "movements": [
+    {
+      "number": 1,
+      "title": "Impromptu No. 1",
+      "tempo": "Allegro molto moderato",
+      "key": "C minor"
+    },
+    {
+      "number": 2,
+      "title": "Impromptu No. 2",
+      "tempo": "Allegro",
+      "key": "E-flat major"
+    },
+    {
+      "number": 3,
+      "title": "Impromptu No. 3",
+      "tempo": "Andante",
+      "key": "G-flat major"
+    },
+    {
+      "number": 4,
+      "title": "Impromptu No. 4",
+      "tempo": "Allegretto",
+      "key": "A-flat major"
+    }
+  ],
+  "historical_context": {
+    "period": "Late Period (1824-1828)",
+    "location_composed": "Vienna, Austria",
+    "premiere": {
+      "date": "1828-12-01",
+      "location": "Vienna (posthumous publication)"
+    }
+  },
+  "influences": [
+    "Beethoven's piano sonatas",
+    "Czech and Hungarian folk music"
+  ],
+  "related_works": [
+    "D935"
+  ],
+  "scores": [
+    {
+      "format": "musicxml",
+      "filename": "scores/piano/D899_impromptus.musicxml",
+      "source": "MuseScore",
+      "license": "Public Domain"
+    }
+  ],
+  "tags": [
+    "piano solo",
+    "romantic",
+    "impromptu",
+    "lyrical",
+    "virtuosic"
+  ],
+  "notes": "Published posthumously in 1857. The third impromptu in G-flat major is one of Schubert's most beloved piano pieces, known for its singing melody and technical demands. Often paired with D935, another set of four impromptus."
+}
