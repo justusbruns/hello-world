@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "total_songs": 94,
+    "analyzed_songs": 94,
+    "failed_songs": []
+  },
+  "keys": {},
+  "harmonies": {},
+  "melodies": {},
+  "rhythms": {},
+  "forms": {},
+  "statistics": {
+    "keys": {
+      "distribution": {
+        "G major": 10,
+        "A major": 8,
+        "c minor": 8,
+        "D major": 7,
+        "a minor": 7,
+        "B- major": 6,
+        "b minor": 6,
+        "g minor": 5,
+        "C major": 5,
+        "E- major": 5,
+        "A- major": 5,
+        "B major": 4,
+        "E major": 4,
+        "d minor": 3,
+        "e minor": 2,
+        "F major": 2,
+        "f# minor": 2,
+        "C# major": 2,
+        "b- minor": 1,
+        "f minor": 1,
+        "g# minor": 1
+      },
+      "most_common": [
+        [
+          "G major",
+          10
+        ],
+        [
+          "A major",
+          8
+        ],
+        [
+          "c minor",
+          8
+        ],
+        [
+          "D major",
+          7
+        ],
+        [
+          "a minor",
+          7
+        ]
+      ],
+      "total_unique": 21
+    },
+    "modes": {
+      "distribution": {
+        "major": 58,
+        "minor": 36
+      },
+      "major_count": 58,
+      "minor_count": 36
+    },
+    "time_signatures": {
+      "distribution": {
+        "2/4": 23,
+        "3/4": 20,
+        "6/8": 18,
+        "2/2": 15,
+        "4/4": 13,
+        "3/8": 3,
+        "12/8": 2
+      },
+      "most_common": [
+        [
+          "2/4",
+          23
+        ],
+        [
+          "3/4",
+          20
+        ],
+        [
+          "6/8",
+          18
+        ],
+        [
+          "2/2",
+          15
+        ],
+        [
+          "4/4",
+          13
+        ]
+      ]
+    },
+    "note_counts": {
+      "mean": 186.77659574468086,
+      "median": 153.0,
+      "min": 47,
+      "max": 651
+    },
+    "durations": {
+      "mean_quarter_lengths": 199.38031914893617,
+      "total_analyzed": 94
+    }
+  }
+}
