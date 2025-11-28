@@ -13,17 +13,34 @@ This repository aims to collect, organize, and annotate digital scores of Franz 
 
 ```
 .
-├── scores/
-│   ├── lieder/           # Art songs for voice and piano
-│   ├── symphonies/       # Symphonic works
-│   ├── chamber/          # Chamber music
-│   ├── piano/            # Piano solo works
-│   ├── sacred/           # Sacred music (masses, etc.)
-│   └── stage_works/      # Operas and theatrical music
-├── metadata/             # JSON metadata files for each work
-│   ├── schema.json       # Metadata schema definition
-│   └── *.json            # Individual work metadata files
-└── tools/                # Scripts for processing and validation
+├── scores/               # Score files organized by format AND category
+│   ├── musicxml/        # MusicXML format (best for analysis)
+│   │   ├── lieder/      # Art songs
+│   │   ├── chamber/     # Chamber music
+│   │   ├── piano/       # Piano works
+│   │   ├── symphonies/  # Symphonic works
+│   │   ├── sacred/      # Sacred music
+│   │   └── stage_works/ # Operas
+│   ├── humdrum/         # Humdrum/Kern format (computational analysis)
+│   │   └── [same subdirs]
+│   ├── midi/            # MIDI format (playback & performance analysis)
+│   │   └── [same subdirs]
+│   ├── mei/             # MEI format (scholarly editions)
+│   │   └── [same subdirs]
+│   └── source/          # Original downloads (.mscz, etc.)
+│       └── [same subdirs]
+├── metadata/            # JSON metadata files for each work
+│   ├── schema.json      # Metadata schema definition
+│   ├── catalog_index.json  # Central catalog of all works
+│   └── D###_*.json      # Individual work metadata files
+├── tools/               # Python analysis & conversion tools
+│   ├── download_scores.py   # Download from various sources
+│   ├── convert_formats.py   # Convert between formats
+│   ├── analyze_scores.py    # Musical analysis tools
+│   ├── requirements.txt     # Python dependencies
+│   └── README.md           # Tools documentation
+├── external/            # External repositories (OpenScore, etc.)
+└── analysis/            # Analysis results and reports
 ```
 
 ## Metadata Schema
@@ -90,9 +107,27 @@ Each work has a JSON metadata file following our schema (see `metadata/schema.js
    - License: Open access
    - Coverage: Selected chamber and piano works
 
+## Quick Start
+
+**New to the project?** See [GET_STARTED_NOW.md](GET_STARTED_NOW.md) for a 30-minute quick start guide.
+
+**Want to download scores?** See [SCORE_ACQUISITION_GUIDE.md](SCORE_ACQUISITION_GUIDE.md) for detailed information about formats and sources.
+
+**Using the tools?** See [tools/README.md](tools/README.md) for complete tool documentation.
+
 ## Getting Started
 
-### 1. Collecting Scores
+### 1. Install Dependencies
+
+```bash
+# Install Python packages for analysis
+pip install -r tools/requirements.txt
+
+# Or just the essentials to start
+pip install music21 requests
+```
+
+### 2. Collecting Scores
 
 For each Schubert work you want to add:
 
@@ -185,11 +220,28 @@ The standard reference is Otto Erich Deutsch's thematic catalog:
 
 ## File Format Preferences
 
-1. **MusicXML** - Best for interchange, widely supported
-2. **MEI** (Music Encoding Initiative) - Highly detailed, scholarly encoding
-3. **Humdrum** - Excellent for computational analysis
-4. **MIDI** - Good for playback, less detailed
-5. **MuseScore (.mscz)** - Can be converted to MusicXML
+For detailed format information, see [SCORE_ACQUISITION_GUIDE.md](SCORE_ACQUISITION_GUIDE.md).
+
+1. **Humdrum/Kern** (.krn) - ⭐⭐⭐⭐⭐ Best for computational analysis
+2. **MusicXML** (.xml, .musicxml) - ⭐⭐⭐⭐ Best for interchange, widely supported
+3. **MEI** (.mei) - ⭐⭐⭐⭐ Highly detailed, scholarly encoding
+4. **MIDI** (.mid) - ⭐⭐⭐ Good for playback and performance analysis
+5. **MuseScore** (.mscz) - Can be converted to MusicXML
+
+### Automated Tools
+
+Use the provided Python tools for downloading and converting:
+
+```bash
+# Download from OpenScore Lieder corpus
+python tools/download_scores.py --openscore
+
+# Convert between formats
+python tools/convert_formats.py input.mscz output.musicxml
+
+# Analyze scores
+python tools/analyze_scores.py score.musicxml --all
+```
 
 ## Contributing
 
@@ -249,15 +301,52 @@ Individual digital scores may have specific licenses:
 
 Always document the source and license in the metadata.
 
+## Computational Analysis
+
+This collection is designed for computational musicology. Available tools:
+
+### Python Analysis Tools (see tools/)
+
+1. **download_scores.py** - Automated score downloading
+2. **convert_formats.py** - Format conversion pipeline
+3. **analyze_scores.py** - Musical analysis (key, harmony, melody, rhythm)
+
+### Analysis Capabilities
+
+- **Key detection** - Automatic key identification
+- **Harmonic analysis** - Chord progression extraction
+- **Melodic analysis** - Interval patterns, contour
+- **Rhythmic analysis** - Duration patterns, complexity
+- **Form analysis** - Structural segmentation
+- **Comparative analysis** - Cross-work comparisons
+
+### Example Analyses
+
+```python
+# Analyze key of all piano works
+from tools.analyze_scores import ScoreAnalyzer
+from pathlib import Path
+
+for score in Path('scores/musicxml/piano').glob('*.musicxml'):
+    analyzer = ScoreAnalyzer(score)
+    key_info = analyzer.analyze_key()
+    print(f"{score.stem}: {key_info['key']}")
+```
+
+See [tools/README.md](tools/README.md) for complete examples.
+
 ## Future Enhancements
 
-- [ ] Automated metadata validation script
-- [ ] Web interface for browsing collection
+- [ ] Automated IMSLP scraper
+- [ ] MuseScore API integration
+- [ ] Harmonic progression visualizer
+- [ ] Melodic similarity finder (query by example)
+- [ ] Web dashboard for browsing collection
 - [ ] Audio recordings cross-reference
 - [ ] Full-text search of poetry in lieder
-- [ ] Musical analysis tools (key relationships, harmonic progressions)
 - [ ] Export to various catalog formats
 - [ ] Integration with musicological databases
+- [ ] Machine learning for style classification
 
 ## Contact & Questions
 

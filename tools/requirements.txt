@@ -1,0 +1,31 @@
+# Python dependencies for Schubert score analysis tools
+
+# Core music analysis library
+music21>=9.1.0
+
+# Additional music libraries
+partitura>=1.4.0  # Performance analysis
+pretty_midi>=0.2.10  # MIDI manipulation
+
+# Data processing
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Web scraping (for downloading)
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# JSON schema validation
+jsonschema>=4.19.0
+
+# Optional: Advanced analysis
+scipy>=1.11.0  # Statistical analysis
+matplotlib>=3.7.0  # Visualization
+seaborn>=0.12.0  # Statistical visualizations
+
+# Optional: Machine learning for pattern recognition
+# scikit-learn>=1.3.0
+
+# Development tools
+pytest>=7.4.0  # Testing
+black>=23.7.0  # Code formatting

@@ -8,24 +8,64 @@ This repository collects and organizes digital scores of Franz Schubert's compos
 
 **See [SCHUBERT_PROJECT.md](SCHUBERT_PROJECT.md) for complete documentation.**
 
+## Documentation
+
+- **[GET_STARTED_NOW.md](GET_STARTED_NOW.md)** - ⚡ 30-minute quick start guide
+- **[SCORE_ACQUISITION_GUIDE.md](SCORE_ACQUISITION_GUIDE.md)** - Detailed guide for downloading analysis-ready scores
+- **[SCHUBERT_PROJECT.md](SCHUBERT_PROJECT.md)** - Complete project documentation
+- **[QUICK_START_GUIDE.md](QUICK_START_GUIDE.md)** - Adding new works step-by-step
+- **[tools/README.md](tools/README.md)** - Python tools documentation
+
 ## Structure
 
-- `scores/` - Machine-readable score files organized by category
+- `scores/` - Score files organized by format (musicxml, humdrum, midi, mei) and category
 - `metadata/` - JSON metadata for each work with detailed information
-- `SCHUBERT_PROJECT.md` - Complete guide and documentation
+- `tools/` - Python scripts for downloading, converting, and analyzing scores
 
 ## Current Collection
 
 - **D667** - Piano Quintet "Trout" (1819)
 - **D899** - Four Impromptus Op. 90 (1827)
 
-## Quick Reference
+## Quick Start
 
-**Score Sources:**
-- IMSLP: https://imslp.org/wiki/Category:Schubert,_Franz
-- MuseScore: https://musescore.com/sheetmusic?text=Schubert
-- Verovio Humdrum: https://verovio.humdrum.org/
+```bash
+# Install dependencies
+pip install music21 requests
+
+# Download OpenScore Lieder corpus (easiest start)
+python tools/download_scores.py --openscore
+
+# Analyze a score
+python tools/analyze_scores.py scores/musicxml/piano/D899.musicxml --all
+
+# Convert formats
+python tools/convert_formats.py input.mscz output.musicxml
+```
+
+## Score Sources
+
+**Best for Analysis:**
+1. **OpenScore Lieder Corpus** - High-quality MusicXML lieder
+2. **Kern Scores** - Humdrum format (best for computational analysis)
+3. **IMSLP** - Most complete catalog (various formats)
+4. **MuseScore** - Community transcriptions (easy downloads)
+
+See [SCORE_ACQUISITION_GUIDE.md](SCORE_ACQUISITION_GUIDE.md) for detailed information.
+
+## Tools
+
+- `tools/download_scores.py` - Download from various sources
+- `tools/convert_formats.py` - Convert between formats
+- `tools/analyze_scores.py` - Musical analysis (key, harmony, rhythm, etc.)
+
+## Quick Reference
 
 **Schubert's Life:** 1797-1828 (Vienna)
 **Total Compositions:** 1000+ works
 **Catalog System:** Deutsch numbers (D###)
+
+**Best Formats for Analysis:**
+- Humdrum/Kern (.krn) - Computational analysis
+- MusicXML (.xml) - General interchange
+- MIDI (.mid) - Performance analysis
