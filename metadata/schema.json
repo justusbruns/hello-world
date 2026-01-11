@@ -1,0 +1,194 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schubert Work Metadata Schema",
+  "description": "Metadata schema for Franz Schubert's musical works",
+  "type": "object",
+  "required": ["work_id", "title", "category", "composition_date"],
+  "properties": {
+    "work_id": {
+      "type": "string",
+      "description": "Unique identifier (D number from Deutsch catalog)",
+      "pattern": "^D\\d+$",
+      "examples": ["D899", "D667"]
+    },
+    "title": {
+      "type": "object",
+      "required": ["original", "english"],
+      "properties": {
+        "original": {
+          "type": "string",
+          "description": "Original title (usually German)"
+        },
+        "english": {
+          "type": "string",
+          "description": "English translation"
+        },
+        "alternative": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Alternative titles or nicknames"
+        }
+      }
+    },
+    "category": {
+      "type": "string",
+      "enum": ["lieder", "symphony", "chamber", "piano", "sacred", "stage_work", "orchestral", "choral"],
+      "description": "Primary category of the work"
+    },
+    "composition_date": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "integer",
+          "minimum": 1810,
+          "maximum": 1828,
+          "description": "Year of composition (Schubert lived 1797-1828)"
+        },
+        "month": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12
+        },
+        "precise_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "circa": {
+          "type": "boolean",
+          "description": "Whether the date is approximate"
+        },
+        "date_range": {
+          "type": "object",
+          "properties": {
+            "start": {"type": "string", "format": "date"},
+            "end": {"type": "string", "format": "date"}
+          }
+        }
+      }
+    },
+    "key": {
+      "type": "string",
+      "description": "Musical key",
+      "examples": ["A major", "D minor", "C major"]
+    },
+    "opus_number": {
+      "type": "string",
+      "description": "Opus number if published during Schubert's lifetime"
+    },
+    "instrumentation": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "List of instruments or voice types",
+      "examples": [["voice", "piano"], ["violin", "piano"], ["string quartet"]]
+    },
+    "duration_minutes": {
+      "type": "number",
+      "description": "Approximate duration in minutes"
+    },
+    "movements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "number": {"type": "integer"},
+          "title": {"type": "string"},
+          "tempo": {"type": "string"},
+          "key": {"type": "string"}
+        }
+      }
+    },
+    "text_source": {
+      "type": "object",
+      "description": "For vocal works - text/poetry information",
+      "properties": {
+        "poet": {"type": "string"},
+        "poem_title": {"type": "string"},
+        "language": {"type": "string"},
+        "text_collection": {"type": "string"}
+      }
+    },
+    "historical_context": {
+      "type": "object",
+      "properties": {
+        "period": {
+          "type": "string",
+          "enum": ["Early Period (1810-1817)", "Middle Period (1818-1823)", "Late Period (1824-1828)"],
+          "description": "Schubert's compositional period"
+        },
+        "location_composed": {
+          "type": "string",
+          "description": "Where it was composed (usually Vienna)"
+        },
+        "dedicatee": {
+          "type": "string",
+          "description": "Person to whom the work was dedicated"
+        },
+        "premiere": {
+          "type": "object",
+          "properties": {
+            "date": {"type": "string", "format": "date"},
+            "location": {"type": "string"},
+            "performers": {"type": "array", "items": {"type": "string"}}
+          }
+        }
+      }
+    },
+    "influences": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Musical or literary influences on this work",
+      "examples": [["Beethoven", "Goethe", "Mozart"]]
+    },
+    "related_works": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Related Schubert works (D numbers)",
+      "examples": [["D898", "D900"]]
+    },
+    "scores": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["format", "filename"],
+        "properties": {
+          "format": {
+            "type": "string",
+            "enum": ["musicxml", "mei", "midi", "humdrum", "mscz", "pdf"],
+            "description": "Score file format"
+          },
+          "filename": {
+            "type": "string",
+            "description": "Relative path to score file"
+          },
+          "source": {
+            "type": "string",
+            "description": "Source of the score (IMSLP, MuseScore, etc.)"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Original URL if applicable"
+          },
+          "editor": {
+            "type": "string",
+            "description": "Editor/arranger of this edition"
+          },
+          "license": {
+            "type": "string",
+            "description": "License (usually public domain for Schubert)"
+          }
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Descriptive tags",
+      "examples": [["romantic", "melancholic", "nature", "death"]]
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes about the work"
+    }
+  }
+}

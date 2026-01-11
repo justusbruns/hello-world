@@ -1,0 +1,35 @@
+{
+  "dataset_info": {
+    "total_songs": 94,
+    "train_size": 71,
+    "val_size": 14,
+    "test_size": 9
+  },
+  "vocabulary_sizes": {
+    "chord_vocab_size": 888,
+    "interval_vocab_size": 31,
+    "key_vocab_size": 22
+  },
+  "sequence_stats": {
+    "num_harmonic_sequences": 94,
+    "num_melodic_sequences": 94,
+    "num_cadences": 94
+  },
+  "matrix_shapes": {
+    "chord_transition": [
+      888,
+      888
+    ],
+    "interval_bigram": [
+      31,
+      31
+    ]
+  },
+  "ngram_counts": {
+    "melodic_bigrams": 50,
+    "melodic_trigrams": 50,
+    "melodic_tetragrams": 30,
+    "chord_bigrams": 4129,
+    "chord_trigrams": 5925
+  }
+}

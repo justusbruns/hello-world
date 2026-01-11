@@ -1,0 +1,101 @@
+{
+  "work_id": "D667",
+  "title": {
+    "original": "Forellenquintett",
+    "english": "Trout Quintet",
+    "alternative": ["Piano Quintet in A major"]
+  },
+  "category": "chamber",
+  "composition_date": {
+    "year": 1819,
+    "circa": false,
+    "date_range": {
+      "start": "1819-01-01",
+      "end": "1819-12-31"
+    }
+  },
+  "key": "A major",
+  "opus_number": "Op. posth. 114",
+  "instrumentation": [
+    "piano",
+    "violin",
+    "viola",
+    "cello",
+    "double bass"
+  ],
+  "duration_minutes": 38,
+  "movements": [
+    {
+      "number": 1,
+      "title": "Allegro vivace",
+      "tempo": "Allegro vivace",
+      "key": "A major"
+    },
+    {
+      "number": 2,
+      "title": "Andante",
+      "tempo": "Andante",
+      "key": "F major"
+    },
+    {
+      "number": 3,
+      "title": "Scherzo: Presto",
+      "tempo": "Presto",
+      "key": "A major"
+    },
+    {
+      "number": 4,
+      "title": "Theme and Variations (from Die Forelle)",
+      "tempo": "Andantino",
+      "key": "D major"
+    },
+    {
+      "number": 5,
+      "title": "Finale: Allegro giusto",
+      "tempo": "Allegro giusto",
+      "key": "A major"
+    }
+  ],
+  "text_source": {
+    "poet": "Christian Friedrich Daniel Schubart",
+    "poem_title": "Die Forelle",
+    "language": "German",
+    "text_collection": "Fourth movement based on the lied D550"
+  },
+  "historical_context": {
+    "period": "Middle Period (1818-1823)",
+    "location_composed": "Steyr, Upper Austria",
+    "dedicatee": "Sylvester Paumgartner",
+    "premiere": {
+      "date": "1819-07-01",
+      "location": "Steyr, Austria",
+      "performers": ["Schubert (piano)", "unknown string players"]
+    }
+  },
+  "influences": [
+    "Hummel's piano quintets",
+    "Beethoven's chamber works",
+    "Schubert's own lied Die Forelle (D550)"
+  ],
+  "related_works": [
+    "D550"
+  ],
+  "scores": [
+    {
+      "format": "musicxml",
+      "filename": "scores/chamber/D667_trout_quintet.musicxml",
+      "source": "IMSLP",
+      "url": "https://imslp.org/wiki/Piano_Quintet_in_A_major,_D.667_(Schubert,_Franz)",
+      "license": "Public Domain"
+    }
+  ],
+  "tags": [
+    "chamber music",
+    "piano quintet",
+    "pastoral",
+    "nature",
+    "lyrical",
+    "theme and variations"
+  ],
+  "notes": "One of Schubert's most popular chamber works. Unusual instrumentation with double bass instead of second violin. The fourth movement is a set of variations on Schubert's earlier lied 'Die Forelle' (The Trout), D550, composed in 1817."
+}
